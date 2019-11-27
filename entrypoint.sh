@@ -12,6 +12,10 @@ if [[ "${environment}" == "production" ]];
 then
     cp env-prod.yml env.yml
 fi
+if [[ !-z ${gateway} ]];
+then
+  echo "  GATEWAY: ${gateway}" >> env.yml
+fi
 
 docker login -u "${docker_username}" -p "${docker_password}" "${container_registry}"
 
