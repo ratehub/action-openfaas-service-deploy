@@ -12,7 +12,7 @@ if [[ "${environment}" == "production" ]];
 then
     cp env-prod.yml env.yml
 fi
-if [[ !-z ${gateway} ]];
+if [[ ! -z ${gateway} ]];
 then
   echo "  GATEWAY: ${gateway}" >> env.yml
 fi
