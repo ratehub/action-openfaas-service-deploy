@@ -15,8 +15,8 @@ fi
 if [[ ! -z ${gateway} ]];
 then
   echo "JACOBDEBUG"
-  cat  env.yml
   echo "  GATEWAY: ${gateway}" >> env.yml
+  cat  env.yml
 fi
 
 docker login -u "${docker_username}" -p "${docker_password}" "${container_registry}"
