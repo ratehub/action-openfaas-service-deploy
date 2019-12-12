@@ -14,7 +14,8 @@ then
 fi
 if [[ ! -z ${gateway} ]];
 then
-  echo "  GATEWAY: ${gateway}" 
+  echo "JACOBDEBUG"
+  cat  env.yml
   echo "  GATEWAY: ${gateway}" >> env.yml
 fi
 
