@@ -6,7 +6,7 @@ git diff HEAD HEAD~1 --name-only > differences.txt
 
 #Assume staging
 cp env-staging.yml env.yml
-echo "ENVIRONMENTLOL: ${environment}"
+echo "Deploying to environment: ${environment}"
 # Depending on which branch we want to choose a different set of environment variables and credentials
 if [[ "${environment}" == "production" ]];
 then
@@ -14,9 +14,7 @@ then
 fi
 if [[ ! -z ${gateway} ]];
 then
-  echo "JACOBDEBUG"
   echo -e "\n  GATEWAY: ${gateway}" >> env.yml
-  cat  env.yml
 fi
 
 docker login -u "${docker_username}" -p "${docker_password}" "${container_registry}"
