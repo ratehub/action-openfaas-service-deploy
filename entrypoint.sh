@@ -6,7 +6,7 @@ git diff HEAD HEAD~1 --name-only > differences.txt
 
 #Assume staging
 cp env-staging.yml env.yml
-
+echo "ENVIRONMENTLOL: ${environment}"
 # Depending on which branch we want to choose a different set of environment variables and credentials
 if [[ "${environment}" == "production" ]];
 then
